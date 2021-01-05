@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div>
+            <router-link to="/login">Login</router-link>
+            <!-- to 속성의 의미 : <a href="/login">LOGIN</a> -->
+            <router-link to="/main">Main</router-link>
+        </div>
+        <router-view></router-view>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <!-- vue 먼저!! 순서도 중요하다 -->
+    <script>
+        var LoginComponent = {
+            template: '<div>Login</div>'
+        }
+        var MainComponent = {
+            template: '<div>Main</div>'
+        }
+        var router = new VueRouter({
+            //페이지의 라우팅 정보가 routes에 배열의 형태로 저장됨
+            mode: 'history', //url에 #제거
+            routes: [
+                // 첫번째 페이지 : login
+                {
+                    // 페이지의 url 이름
+                    path:'/login',
+                    component: LoginComponent
+                },
+                // 두번째 페이지 : main
+                {
+                    //url은 main, 컴포넌트 이름은 MainComponent
+                    path:'/main',
+                    component: MainComponent
+                },
+            ]
+        });
+        new Vue({
+            el: '#app',
+            router: router,
+        });
+    </script>
+</body>
+</html>

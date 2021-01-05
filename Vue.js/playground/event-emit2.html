@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <div id="app">
+        <p>{{ num }}</p>
+        <app-header v-on:increase='increase'></app-header>
+        <app-content v-on:decrease='decrease'></app-content>
+    </div>
+
+    <script>
+        var appHeader = {
+            template: '<button v-on:click="addNum"> 증가 </button>',
+            methods: {
+                addNum: function(){
+                    this.$emit('increase');
+                }
+            }
+        }
+        var appContent = {
+            template: '<button v-on:click="minuNum"> 감소 </button>',
+            methods:{
+                minuNum: function(){
+                    this.$emit('decrease');
+                }
+            }
+        }
+        new Vue({
+            el: '#app',
+            components: {
+                'app-header': appHeader,
+                'app-content': appContent,
+            },
+            methods:{
+                increase: function(){
+                    this.num++;
+                },
+                decrease: function(){
+                    this.num--;
+                }
+            },
+            data:{
+                num : 10
+            }
+        })
+    </script>
+</body>
+</html>
