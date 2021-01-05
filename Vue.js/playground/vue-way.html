@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        var div = document.querySelector('#app');
+        div.innerHTML = 'hello world';
+        var viewModel = {};
+
+        //Object.defineProperty()
+        //Object.defineProperty() 정적 메서드는 객체에 직접 새로운 속성을 정의하거나 이미 존재하는 속성을 수정한 후, 그 객체를 반환합니다.
+        //객체의 동작을 재정의 하는 것.
+        
+        // Object.defineProperty('대상 객체', '객체의 속성',{
+            // 정의할 내용
+        //})
+        // 반응성 : Reactivity 구현 + 데이터 바인딩
+        Object.defineProperty(viewModel,'str',{
+            // 속성의 접근했을 때의 동작을 정의
+            get: function(){
+                console.log('접근');
+            },
+            // 속성에 값을 할당했을 때의 동작을 정의
+            set : function(newValue) {
+                console.log('할당', newValue);
+                // newValue = 새로 할당된 값
+                div.innerHTML = newValue;
+            }
+        });
+    </script>
+</body>
+</html>

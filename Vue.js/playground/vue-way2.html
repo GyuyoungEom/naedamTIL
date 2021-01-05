@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        // Reactivity 코드 라이브러리화
+        var div = document.querySelector('#app');
+        //div.innerHTML = 'hello world';
+        var viewModel = {};
+        // (function(){})() : 즉시실행함수(정의되자마자 즉시 실행되는 js function)
+        (function() {
+            function init(){
+                Object.defineProperty(viewModel,'str',{
+                    // 속성의 접근했을 때의 동작을 정의
+                    get: function(){
+                        console.log('접근');
+                    },
+                    // 속성에 값을 할당했을 때의 동작을 정의
+                    set : function(newValue) {
+                        console.log('할당', newValue);
+                        // newValue = 새로 할당된 값
+                        render(newValue);
+                    }
+                });
+            }
+            function render(value){
+                div.innerHTML = value;
+            }
+
+            init();
+        })();
+    </script>
+</body>
+</html>

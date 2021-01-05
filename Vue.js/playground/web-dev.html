@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- hello world -->
+    </div>
+    <script>
+        // $('app');
+        // 위와 아래는 같은 의미
+        var div = document.querySelector('#app'); //div태그의 정보를 받아옴
+        // console.log(div);
+        var str = 'hello world';
+        div.innerHTML = str;
+        str += '!!!';
+        // 여기까지 할 경우 변동사항 없음
+        // div.innerHTML = str; // 여기까지 해야 변동됨
+        
+        
+    </script>
+</body>
+</html>
