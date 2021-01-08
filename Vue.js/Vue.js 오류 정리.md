@@ -7,12 +7,12 @@ found 2 vulnerabilities (1 moderate, 1 high)
 	run 'npm audit fix' to fix them, or 'npm audit' for details
 ```
 
-- 발생원인
+- 발생 원인
 
   - npm install시 package의 취약점을 검사함.
   - 이 때, 취약점이 발견되어 `npm audit fix`가 필요
 
-- 해결 방법
+- 해결 방안
 
   `npm audit fix`
 
@@ -43,7 +43,7 @@ error: Unexpected console statement (no-console) at src\App.vue:31:7:
   34 |         username: this.username,
 ```
 
-- 발생원인
+- 발생 원인
 
   - ESLint에서 console.log에 대해 인식하지 못함
     - ESLint : JavaScript 코드에서 발견된 문제 패턴을 식별하기 위한 정적 코드 분석 도구

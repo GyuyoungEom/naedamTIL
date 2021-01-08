@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="BoardMapper">
+	<!-- 21.01.08 작성 -->
+	<select id="boardListAll" resultType="vo.BoardVO">
+		select boardNum, title, content, writeDate, id
+		from board
+	</select>
+	<insert id="boardCreate" parameterType="vo.BoardVO">
+		insert into board(id, title, writeDate, content) 
+		values(#{id},#{title},now(),#{content})
+	</insert>
+</mapper>
