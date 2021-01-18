@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="BoardMapper">
+	<!-- 21.01.08 작성 -->
+	<!-- 21.01.12 수정 -->
+	<select id="boardListAll" resultType="vo.BoardVO">
+		select boardNum, title, writeDate, id, content
+		from board
+		order by writeDate desc
+	</select>
+	<insert id="boardCreate" parameterType="vo.BoardVO">
+		insert into board(id, title, writeDate, content) 
+		values(#{id},#{title},now(),#{content})
+	</insert>
+	<delete id="boardDelete">
+		delete from board where boardNum = #{boardNum}
+	</delete>
+	<select id="boardOne" resultType="vo.BoardVO">
+		select boardNum, title, writeDate, id, content
+		from board
+		where boardNum = #{boardNum}
+	</select>
+	<update id="updateBoard" parameterType="vo.BoardVO">
+		update board set
+		title = #{ title }, content = #{ content }, writeDate = now()
+		where boardNum = #{ boardNum }  
+	</update>
+	
+	<!-- 21.01.18 작성 -->
+	<select id="searchBoard" resultType="vo.BoardVO" parameterType="java.util.HashMap">
+		select boardNum, title, writeDate, id, content
+		from board
+		where ${searchType} like'%'||#{keyword}||'%'
+	</select>
+</mapper>

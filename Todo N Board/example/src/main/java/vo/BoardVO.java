@@ -1,11 +1,12 @@
 package vo;
 
+import java.sql.Date;
+
 public class BoardVO {
 	private int boardNum;
-	private int id;
-	private String pwd;
+	private String id;
 	private String content;
-	private String writeDate;
+	private Date writeDate;
 	private String title;
 	
 	public int getBoardNum() {
@@ -14,28 +15,23 @@ public class BoardVO {
 	public void setBoardNum(int boardNum) {
 		this.boardNum = boardNum;
 	}
-	public int getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
-	public String getPwd() {
-		return pwd;
-	}
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
-	}
+
 	public String getContent() {
 		return content;
 	}
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getWriteDate() {
+	public Date getWriteDate() {
 		return writeDate;
 	}
-	public void setWriteDate(String writeDate) {
+	public void setWriteDate(Date writeDate) {
 		this.writeDate = writeDate;
 	}
 	public String getTitle() {
@@ -46,7 +42,7 @@ public class BoardVO {
 	}
 	@Override
 	public String toString() {
-		return "BoardVO [boardNum=" + boardNum + ", id=" + id + ", pwd=" + pwd + ", content=" + content + ", writeDate=" + writeDate
+		return "BoardVO [boardNum=" + boardNum + ", id=" + id + ", content=" + content + ", writeDate=" + writeDate
 				+ ", title=" + title + "]";
 	}
 }

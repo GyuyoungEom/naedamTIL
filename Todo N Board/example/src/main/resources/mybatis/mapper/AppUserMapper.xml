@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="AppUserMapper">
+	<!-- 21.01.08 작성 -->
+	<select id="idCheck" resultType="String">
+		select id
+		from appUser
+		where id=#{id} and pwd=#{pwd}
+	</select>
+	<insert id="insertUser" parameterType="vo.AppUserVO">
+		insert into appUser(id, pwd)
+		values(#{id},#{pwd})
+	</insert>
+	<!-- 21.01.12 resultType 수정 -->
+	<select id="viewUser" resultType="String">
+		select id
+		from appUser
+	</select>
+</mapper>

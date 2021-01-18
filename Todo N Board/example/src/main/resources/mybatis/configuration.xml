@@ -6,4 +6,15 @@
   <settings>
        <setting name="jdbcTypeForNull" value="NULL" />      
   </settings>  
+  <typeAliases>
+  	<typeAlias type="vo.BoardVO" alias="BoardVO"/>
+  	<typeAlias type="vo.AppUserVO" alias="AppUserVO"/>
+  	<typeAlias type="vo.TodoVO" alias="TodoVO"/>
+  	<typeAlias type="vo.TodoVO2" alias="TodoVO2"/>
+  </typeAliases>
+  <mappers>
+  	<mapper resource="mybatis/mapper/BoardMapper.xml"/>
+  	<mapper resource="mybatis/mapper/AppUserMapper.xml"/>
+  	<mapper resource="mybatis/mapper/TodoMapper.xml"/>
+  </mappers>
 </configuration>
