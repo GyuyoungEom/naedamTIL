@@ -34,7 +34,33 @@
      - 값을 다시 확인
      - controller에서 dto 누락값 추가
 
-## 404 에러
+### 단순 실수
 
+ 1. org.apache.jasper.JasperException 에러
 
+    ``` console
+    org.apache.jasper.JasperException: /jsp/oboe/portal/notice/viewNotice2.jsp(81,24) 
+    ```
 
+    - 원인
+      - jsp파일에서 `<c:if test='${}'>`에서 } 빼먹음
+    - 해결 방안
+      - test 속성 다시 작성
+
+## 400 에러
+
+1. HTTP Status 400-
+
+   ``` console
+   type Status report
+   
+   message
+   
+   description The request sent by the client was syntactically incorrect ().
+   ```
+
+   - 원인
+     - 요청시에 문제가 발생하여 처리하지 않겠다 (못하겠다)
+     - 보낸 parameter와 받는 parameter가 같지 않아서 요청하지 못함
+   - 해결 방안
+     - 아직 찾는중....
