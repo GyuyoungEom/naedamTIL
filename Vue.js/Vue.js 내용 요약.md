@@ -144,3 +144,11 @@
   </style>
   ```
 
+
+
+## 라이프사이클 다이어그램
+
+![](https://kr.vuejs.org/images/lifecycle.png)
+
+​																												*` 출처 :  https://kr.vuejs.org/v2/guide/instance.html`*
+
