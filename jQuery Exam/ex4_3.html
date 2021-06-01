@@ -9,22 +9,24 @@
 <body>
     <script>
         var score;
-        score = prompt('점수 입력');
-        if(score <= 100){
-            if(score >= 90){
-                document.write('A');
-            }else if(score >= 80){
-                document.write('B');
-            }else if(score >= 70){
-                document.write('C');
-            }else if(score >= 60){
-                document.write('D');
+        do{
+            score = prompt('점수 입력');
+            if(score <= 100){
+                if(score >= 90){
+                    document.write('A');
+                }else if(score >= 80){
+                    document.write('B');
+                }else if(score >= 70){
+                    document.write('C');
+                }else if(score >= 60){
+                    document.write('D');
+                }else {
+                    document.write('F');
+                }
             }else {
-                document.write('F');
+                alert('wrong score');
             }
-        }else {
-            alert('wrong score');
-        }
+        }while(score>100);
     </script>
 </body>
 </html>

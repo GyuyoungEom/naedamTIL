@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 10부터 1까지 거꾸로
+        var n = 10;
+        do{
+            document.write(n + '<br>');
+            n--;
+        }while(n>0);
+        
+        document.write('<hr>');
+
+        // 1에서 10까지 홀수의 합
+        var k = 1;
+        var sum = 0;
+        do{
+            sum += k;
+            k += 2;
+        }while(k<10);
+        document.write(sum);
+
+    </script>
+</body>
+</html>
