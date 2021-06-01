@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var score, sscore;
+        score = prompt('insert score');
+        sscore = Math.floor(score/10);
+
+        switch(sscore){
+            case 10:
+            case 9:
+                document.write('A'); break;
+            case 8:
+                document.write('B'); break;
+            case 7:
+                document.write('C'); break;
+            case 6:
+                document.write('D'); break;
+            default:
+                document.write('F');
+        }
+    </script>
+</body>
+</html>

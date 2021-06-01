@@ -214,7 +214,7 @@
 
 ## 라이프사이클 다이어그램
 
-![](https://kr.vuejs.org/images/lifecycle.png)
+<img src="https://kr.vuejs.org/images/lifecycle.png" style="zoom: 50%;" />
 
 ​																												*` 출처 :  https://kr.vuejs.org/v2/guide/instance.html`*
 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 10;
+        var b = 5;
+        var op, total;
+
+        op = prompt('insert operation');
+
+        switch(op){
+            case '+':
+                total = a + b;
+                document.write('plus : '+ total); break;
+            case '-':
+                total = a - b;
+                document.write('minus : '+ total); break;
+            case '*':
+                total = a * b;
+                document.write('multiple : '+ total); break;
+            case '/':
+                total = a / b;
+                document.write('division : '+ total); break;
+            default:
+                document.write('wrong op');
+        }
+    </script>
+</body>
+</html>
