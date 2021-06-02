@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function private(h, w, age){
+            this.h = h;
+            this.w = w;
+            this.age = age;
+            this.print = print;
+        }
+
+        function print(){
+            document.write(this.age+"세 <br>");
+            document.write(this.w+"kg <br>");
+            document.write(this.h+"cm <p>");
+        }
+        
+        var p1 = new private(170,60,23);
+        p1.print();
+    </script>
+</body>
+</html>

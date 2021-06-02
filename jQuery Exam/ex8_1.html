@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var today = new Date();
+        var year = today.getFullYear();
+        // getYear()하면 -1900값 return
+        var month = today.getMonth()+1;
+        // getMonth()는 0부터
+        var date = today.getDate();
+
+        document.write("<h4>Today</h4>");
+        document.write(year + "년" + month + "월" + date + "일" + "<p/>");
+
+        var hour = today.getHours();
+        var min = today.getMinutes();
+        var sec = today.getSeconds();
+
+        document.write("now : ");
+        document.write(hour + "시" + min + "분" + sec + "초");
+    </script>
+</body>
+</html>

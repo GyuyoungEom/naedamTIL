@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function jumsu(name,kor,eng,math){
+            this.name = name;
+            this.kor = kor;
+            this.eng = eng;
+            this.math = math;
+        }
+
+        var saram = [new jumsu('aaa',90,99,90), new jumsu('bbb',100,91,90)];
+
+        for(var i=0; i<saram.length; i++){
+            document.write('name : ' + saram[i].name + '<br>');
+            document.write('kor : ' + saram[i].kor +'<br>');
+            document.write('eng : ' + saram[i].eng +'<br>');
+            document.write('math : ' + saram[i].math +'<p>');
+            //document.write('<hr>');
+        }
+    </script>
+</body>
+</html>

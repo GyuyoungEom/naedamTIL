@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function yn(opt){
+            if(opt == 'y') alert('BAD');
+            else if(opt == 'n') alert('GOOD');
+        }
+    </script>
+    
+    <h4>담배 피우나?</h4>
+    <form>
+        <input type="button" value="yes" onclick="yn('y')">
+        <input type="button" value="no" onclick="yn('n')">
+    </form>
+</body>
+</html>

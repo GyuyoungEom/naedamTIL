@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function tv(brand,name,price){
+            this.brand = brand;
+            this.name = name;
+            this.price = price;
+            this.print = print;
+        }
+        
+        function print(){
+            document.write('brand : ' + this.brand + '<br>');
+            document.write('name : ' + this.name + '<br>');
+            document.write('price : ' + this.price + '<p>');
+        }
+
+        var tv1 = new tv('samsung','pavv','$9,999');
+        var tv2 = new tv('lg','xcanvas','$9,900');
+
+        document.write('<h2>TV1</h2>');
+        tv1.print();
+        document.write('<h2>TV2</h2>');
+        tv2.print();
+    </script>
+</body>
+</html>
