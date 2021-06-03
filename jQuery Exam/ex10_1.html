@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var score = new Function("kor", "mat" , "eng", "return (kor + mat + eng)/3");
+
+        document.write("function 객체 - 평균 : "+score(99,100,95)+"<br>");
+    </script>
+
+    <hr>
+
+    <script>
+        document.write("화면 높이 : " + screen.availHeight + "<p>");
+        document.write("화면 넓이 : " + screen.availWidth + "<p>");
+        document.write("색 수 : " + screen.colorDepth + "<p>");
+        document.write("픽셀당 높이 : " + screen.height + "<p>");
+        document.write("픽셀당 넓이 : " + screen.width + "<p>");
+        document.write("픽셀당 비트수 : " + screen.pixelDepth + "<p>");
+    </script>
+</body>
+</html>
