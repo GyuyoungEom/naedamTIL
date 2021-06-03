@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // IE에서 확인 가능 -> chrome은?
+        function init(){
+            defaultStatus = 'Learn Window Object';
+        }
+
+        function win_open(){
+            window.open();
+        }
+
+        function win_open2(){
+            window.open("exercise3.html","open_win1","toolbar=yes, status=yes, resizable=yes");
+        }
+
+        function msg(val){
+            switch(val){
+                case true:
+                    window.status = 'one click';
+                    break;
+                default:
+                    window.status = 'two click';
+            }
+        }
+    </script>
+</head>
+<body onload="init()">
+    <h4>print</h4>
+    <form>
+        <input type="button" value="open new window" onclick="win_open()">
+        <input type="button" value="open new window2" onclick="win_open2()">
+        <hr>
+        <h4>Click the button</h4>
+        <input type="button" value="button" onclick="msg(true)" ondblclick="msg(false)">
+    </form>
+</body>
+</html>

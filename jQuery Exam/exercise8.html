@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function changeBg(val){
+            switch(val){
+                case true:
+                    window.status = 'one click';
+                    document.bgColor =  'pink';
+                    break;
+                default:
+                    window.status = 'double click';
+                    document.bgColor = 'lightblue';
+            }
+        }
+    </script>
+
+    <form>
+        <input type="button" value="changeBgColor" onclick="changeBg(true)" ondblclick="changeBg(false)">
+    </form>
+</body>
+</html>
