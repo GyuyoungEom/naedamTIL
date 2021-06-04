@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function info(){
+            var str; 
+
+            str = 'name : ' + document.form1.name + "<br>";
+            str += 'action : ' + document.form1.action + "<br>";
+            str += 'target : ' + document.form1.target + "<br>";
+            str += 'method : ' + document.form1.method + "<br>";
+            str += 'encoding : ' + document.form1.encoding + "<br>";
+            str += 'length : ' + document.form1.length + "<br>";
+            
+            document.write(str);
+        }
+
+        function info2(){
+            var str;
+
+            if(document.form2.elements[0].value != ""){
+                str = "tel : "+ document.form2.elements[0].value;
+            }else{
+                str = "tel : none <br>";
+            }
+
+            if(document.form2.elements[1].value != ""){
+                str += "addr : "+ document.form2.elements[1].value;
+            }else{
+                str += "addr : none <br>";
+            }
+
+            document.write(str);
+        }
+    </script>
+    <form action="abc.html" method="GET" name="form1">
+        <input type="button" value="view formInfo" onclick="info();">
+    </form>
+
+    <hr>
+
+    <form name="form2">
+        tel : <input type="tel" name="name1" size="20"><p></p>
+        addr : <input type="text" name="name2" size="50"><p></p>
+
+        <input type="button" value="confirm" onclick="info2();">
+    </form>
+</body>
+</html>
